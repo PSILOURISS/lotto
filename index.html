@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript Lucky Number</title>
+  <style>
+#exada{
+	  font-size:25px;
+	  width:180px;
+	  height:30px;
+	  padding:5px;
+	  border:1px solid black;
+}
+</style>
+ 
+</head>
+<body>
+<img src="lotto.jpg" width="300">
+<br>
+<br>
+<button onclick="klirosi()">Τυχερή εξάδα</button>
+<br>
+<br>
+<div id="exada"></div>
+<script>	
+function klirosi(){
+	var exada=document.querySelector("#exada");
+	var n;
+	var p=new Array();
+	for (var i=1;i<=6;i++){
+		do{
+		n=Math.floor(Math.random()*49)+1;
+		} while (p.indexOf(n)!=-1);
+		p.push(n);
+	}
+	exada.innerHTML=p;
+}
+
+</script>
+</body>
+</html>
